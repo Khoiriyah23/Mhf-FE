@@ -47,7 +47,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className="lg:hidden flex items-center">
-        {/* Add a hamburger menu or mobile menu toggle button here */}
+        
         <button aria-label="Open Menu" className="text-black">
           {/* Icon or hamburger SVG */}
           ☰
