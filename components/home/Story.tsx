@@ -11,10 +11,10 @@ const Story = () => {
             uplifting <span className="text-yellow-600">humanity</span> through compassion with principles, guidings, and teachings of 
             <span className="text-green-500"> Islam</span>.
           </h3>
-          <h6 className="text-xl font-semibold mb-6"> {/* Increased heading size and margin */}
+          <h6 className="text-xl font-semibold mb-6"> 
             Story & Background
           </h6>
-          <p className="text-gray-700 leading-relaxed text-lg"> {/* Increased text size */}
+          <p className="text-gray-700 leading-relaxed text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae obcaecati 
             ducimus possimus qui, enim nam accusantium itaque aliquam sapiente reiciendis recusandae cum deleniti 
             voluptatibus nemo iusto perspiciatis eum a quis?
@@ -26,7 +26,7 @@ const Story = () => {
           <Image 
             src="/images/hands.png" 
             alt="Hand Spread" 
-            width={600}  /* Adjusted dimensions */
+            width={600} 
             height={400} 
             className="rounded-lg shadow-lg object-cover"
           />
