@@ -26,7 +26,7 @@ const Impact = () => {
   ];
 
   return (
-    <section className="bg-[#F6F8F2] py-16 px-8 flex flex-col items-center justify-center">
+    <section className="bg-[#F6F8F2] flex flex-col items-center justify-center">
       {/* Title Section */}
       <article className="text-center mb-8">
         <h1 className="text-3xl font-bold text-[#3A3A3A]">
@@ -38,35 +38,42 @@ const Impact = () => {
       </article>
 
       {/* Carousel Section */}
-      <div className="flex items-center justify-center gap-4 w-full">
-        {/* Left Arrow */}
-        <button
-          onClick={handlePrev}
-          className="bg-[#EFF8E8] text-[#6A8F4A] w-14 h-14 flex items-center justify-center rounded-full shadow-md"
-          aria-label="Previous Slide"
-        >
-          {"<"}
-        </button>
-
-        {/* Cards */}
-        <div className="flex gap-4 w-4/5 items-center justify-center">
+      <div id="default-carousel" className="relative w-[70%]">
+        {/* Carousel wrapper */}
+        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
           {visibleStories.map((story, index) => (
             <div
               key={index}
-              className="bg-[#FFFBEC] rounded-lg shadow-lg flex-1 h-80 p-8 flex items-center justify-center text-[#3A3A3A] transition-all duration-500"
+              className="hidden duration-700 ease-in-out"
+              style={{ display: index === 0 ? 'block' : 'none' }} // Show first story only initially
             >
-              <p>{story}</p>
+              <div className="absolute block text-center p-20 bg-[#FFFBEC] rounded-lg shadow-lg">
+                <p className="text-[#3A3A3A]">{story}</p>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Right Arrow */}
+        {/* Slider controls */}
+        <button
+          onClick={handlePrev}
+          className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        >
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 10">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
+            </svg>
+          </span>
+        </button>
         <button
           onClick={handleNext}
-          className="bg-[#3A3A3A] text-white w-14 h-14 flex items-center justify-center rounded-full shadow-md"
-          aria-label="Next Slide"
+          className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         >
-          {">"}
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 10">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+            </svg>
+          </span>
         </button>
       </div>
     </section>
