@@ -26,7 +26,7 @@ const Impact = () => {
   ];
 
   return (
-    <section className="bg-[#F6F8F2] flex flex-col items-center justify-center">
+    <section className="bg-[#F6F8F2] mb-10 flex flex-col items-center justify-center">
       {/* Title Section */}
       <article className="text-center mb-8">
         <h1 className="text-3xl font-bold text-[#3A3A3A]">
@@ -38,7 +38,7 @@ const Impact = () => {
       </article>
 
       {/* Carousel Section */}
-      <div id="default-carousel" className="relative w-[70%]">
+      <div id="default-carousel" className="relative w-[70%] mb-5">
         {/* Carousel wrapper */}
         <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
           {visibleStories.map((story, index) => (
