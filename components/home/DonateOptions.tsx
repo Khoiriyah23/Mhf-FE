@@ -20,7 +20,7 @@ const DonateOptions = () => {
             {options.map((option) => (
               <div
                 key={option.id}
-                className="bg-[#f1e4bc] bg-opacity-75 border border-[#F4ECC2] rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
+                className="bg-[#F3F9E6C7] bg-opacity-75 border border-[#F1E4BCBD] rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
               >
                 {/* Circle Number */}
                 <div className="w-12 h-12 mx-auto flex items-center justify-center bg-green-500 text-white font-bold text-lg rounded-full mb-4">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/home/Navbar";
 
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({
       <head></head>
       <body
       >
+        <Navbar />
         <main className="overflow-hidden" style={{ backgroundColor: 'rgba(252, 255, 246, 0.97)', minHeight: '100vh' }}>
           {children}
         </main>

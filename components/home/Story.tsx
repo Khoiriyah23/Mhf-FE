@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Story = () => {
   return (
-    <section className="bg-[#FCFCDC] bg-opacity-80 py-16 px-12">
+    <section className="bg-[#FFFBD0E0] bg-opacity-80 py-16 px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12"> 
         {/* Text Content */}
         <div className="md:w-1/2">

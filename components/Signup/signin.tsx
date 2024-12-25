@@ -1,35 +1,40 @@
+'use client'; // Add this for components in the app directory to enable client-side hooks
+
 import React, { FormEvent } from 'react';
 import { useRouter } from 'next/router';
 import Button from '../Button';
 
-const SignIn = () => {
+export default function SignIn() {
   const router = useRouter();
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const email = formData.get('email');
-    const password = formData.get('password');
+    const email = formData.get('email') as string;
+    const password = formData.get('password') as string;
 
-    const response = await fetch('/api/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    });
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
 
-    if (response.ok) {
-      router.push('/'); // Redirect to the landing page
-    } else {
-      // Handle errors (you can display an error message)
-      console.error('Login failed');
+      if (response.ok) {
+        router.push('/'); // Redirect to the home page
+      } else {
+        console.error('Login failed');
+      }
+    } catch (error) {
+      console.error('Error:', error);
     }
   }
 
   return (
     <section className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-[90%] max-w-md bg-white shadow-lg rounded-lg p-6">
-        <h1 className="text-2xl font-bold text-gray-800 mb-4">Welcome Back here</h1>
+        <h1 className="text-2xl font-bold text-gray-800 mb-4">Welcome Back</h1>
         <p className="text-gray-600 mb-6">Please enter your details</p>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
@@ -68,7 +73,6 @@ const SignIn = () => {
             </a>
           </div>
 
-          {/* Login Button */}
           <Button
             type="submit"
             title="Login"
@@ -76,15 +80,12 @@ const SignIn = () => {
             variant="green"
             className="px-6 py-2 mt-4 w-full flex items-center justify-center space-x-2 text-white bg-green-500 rounded-md hover:bg-green-600 transition"
           />
-
-          {/* Sign in with Google Button */}
           <Button
             type="button"
             title="Sign in with Google"
             icon=""
             variant="green"
             className="px-6 py-2 mt-4 w-full flex items-center justify-center space-x-2 text-white bg-green-500 rounded-md hover:bg-green-600 transition"
-            // onClick={() => alert('Sign in with Google not implemented')}
           />
         </form>
 
@@ -97,6 +98,4 @@ const SignIn = () => {
       </div>
     </section>
   );
-};
-
-export default SignIn;
+}
