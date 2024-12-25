@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Image from 'next/image';
 import Button from '../Button'
 
 const Hero = () => {
@@ -22,7 +22,7 @@ const Hero = () => {
         />
       </div>
       <div className="mt-8">
-        <img 
+        <Image
           src="/images/hero-img.png" 
           alt="Humanitarian Act" 
           className="rounded-lg mx-auto w-full max-w-4xl"
