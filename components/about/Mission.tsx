@@ -6,7 +6,7 @@ const MissionAndVision = () => {
     <section>
     <div>
         <h4>Mission & Vision</h4>
-      <h2>Muslim Helper's Foundation</h2>
+      <h2>Muslim Helper&apos;s Foundation</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolor 
         voluptates quod totam accusamus eligendi quae eius expedita facere,
         .</p>

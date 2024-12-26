@@ -1,6 +1,5 @@
 import HowItWorks from '@/components/about/How'
 import MissionAndVision from '@/components/about/Mission'
-import Image from 'next/image'
 import React from 'react'
 
 const AboutUS = () => {
