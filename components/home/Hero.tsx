@@ -25,6 +25,8 @@ const Hero = () => {
         <Image
           src="/images/hero-img.png" 
           alt="Humanitarian Act" 
+          width={200}
+          height={50}
           className="rounded-lg mx-auto w-full max-w-4xl"
         />
       </div>
