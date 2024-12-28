@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Button from '../Button'
+import hero from '../../public/images/hero-img.png'
 
 const Hero = () => {
   return (
@@ -23,10 +24,8 @@ const Hero = () => {
       </div>
       <div className="mt-8">
         <Image
-          src="/images/hero-img.png" 
+          src={hero}
           alt="Humanitarian Act" 
-          width={200}
-          height={50}
           className="rounded-lg mx-auto w-full max-w-4xl"
         />
       </div>
