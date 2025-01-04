@@ -73,7 +73,7 @@ const OngoingDonation = () => {
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {programs.map((program) => (
-            <Link href={`/donate/${program.id}`} key={program.id}>
+            <Link href={`/donation/${program.id}`} key={program.id}>
               <div className="bg-[#ececdf] rounded-lg shadow-lg border-[#E9D79B] hover:shadow-xl transition-shadow cursor-pointer">
                 {/* Image */}
                 <div className="overflow-hidden">
