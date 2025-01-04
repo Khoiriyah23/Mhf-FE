@@ -71,7 +71,7 @@ export default function Login() {
 
             <div className="text-sm text-center text-gray-600">
                 <p>
-                    Don't have an account?{" "}
+                    Don&#39;t have an account?{" "}
                     <a href="/register" className="underline">
                         Register
                     </a>
