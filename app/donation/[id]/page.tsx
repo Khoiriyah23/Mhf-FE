@@ -82,7 +82,7 @@ const Page = ({ params }: { params: { id: number } }) => {
                     className=' rounded-2xl'
                     />
                 </div>
-                <p className='text-xl font-semibold py-4'>{program.title}</p>
+                <p className='text-xl font-semibold py-5'>{program.title}</p>
                 <p className='leading-loose w-11/12'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
                     ratione sequi enim, quos voluptate rerum, ipsum, suscipit numquam
