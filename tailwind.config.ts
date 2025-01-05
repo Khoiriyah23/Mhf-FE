@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        donationBg: '#FFFAEA',
+        progressiveBar: '#839758',
+        progressiveText: '#8D7525'
       },
     },
   },

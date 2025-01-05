@@ -69,21 +69,21 @@ const Page = ({ params }: { params: { id: number } }) => {
   return (
     <div className='w-4/6 mx-auto mt-32'>
         <h1 className='text-center text-2xl font-bold mb-16'>Donation Process</h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2'>
 
             {/* Left Section */}
             <div>
-                <div className='w-[579px] h-[289px] relative '>
+                <div className='w-full'>
                     <Image
                     src={program.imageSrc}
                     alt={program.title}
-                    fill
-                    objectFit='cover'
-                    className='absolute rounded-2xl'
+                    width={480}
+                    height={20}
+                    className=' rounded-2xl'
                     />
                 </div>
                 <p className='text-xl font-semibold py-4'>{program.title}</p>
-                <p className='leading-loose'>
+                <p className='leading-loose w-11/12'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
                     ratione sequi enim, quos voluptate rerum, ipsum, suscipit numquam
                     minus architecto amet vero distinctio consequatur voluptatibus
@@ -94,28 +94,31 @@ const Page = ({ params }: { params: { id: number } }) => {
             {/* Right Section */}
             <div>
 
-                            {/* Progress Bar */}
-                <div className="w-full bg-gray-200 h-2 rounded-full mt-3">
-                    <div className="h-2 bg-green-500 rounded-full" style={{ width: `${(program.raised / program.goal) * 100}%`,}}></div>
-                </div>
+                           {/* Progress Bar Section*/}
+                <div className='w-full h-52 bg-donationBg flex flex-col justify-center items-center px-8'>        
+                    <div className="w-full bg-gray-200 h-5 rounded-full mt-3">
+                        <div className="h-5 bg-progressiveBar rounded-full" style={{ width: `${(program.raised / program.goal) * 100}%`}}></div>
+                    </div>
+                    <div className='flex justify-between w-full mt-4 text-lg text-progressiveText'>
+                        <p>Raised {program.raised}</p>
+                        <p>Target {program.goal}</p>
+                    </div>
+                </div>  
 
-                <div>Donate Using Paystack</div>
-                <div>
-                    <p>Or</p>
-                    <p>Direct Transfer to Account details below</p>
-                    <div>
-                        <p>Account Name</p>
-                        <p>:</p>
+                <div className='mt-10 bg-progressiveBar p-4 text-center rounded-3xl text-white text-xl'>Donate Using Paystack</div>
+                <div className='w-5/6 mx-auto'>
+                    <p className='my-5 text-center'>Or</p>
+                    <p className='text-xl font-semibold'>Direct Transfer to Account details below</p>
+                    <div className='flex justify-between mt-4'>
+                        <p>Account Name:</p>
                         <p>Muhammed Jummah</p>
                     </div>
-                    <div>
-                        <p>Account Number</p>
-                        <p>:</p>
+                    <div className='flex justify-between mt-4'>
+                        <p>Account Number:</p>
                         <p>04563289</p>
                     </div>
-                    <div>
-                        <p>Bank Name</p>
-                        <p>:</p>
+                    <div className='flex justify-between mt-4'>
+                        <p>Bank Name:</p>
                         <p>Jaiz Bank</p>
                     </div>
                 </div>
