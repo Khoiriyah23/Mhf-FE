@@ -73,6 +73,7 @@ const Page = ({ params }: { params: { id: number } }) => {
 
             {/* Left Section */}
             <div>
+              {/* testing somethin */}
                 <div className='w-full'>
                     <Image
                     src={program.imageSrc}
