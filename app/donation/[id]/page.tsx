@@ -68,61 +68,59 @@ const Page = ({ params }: { params: { id: number } }) => {
 
   return (
     <div className='w-4/6 mx-auto mt-32'>
-      <h1 className='text-center text-2xl font-bold mb-16'>Donation Process</h1>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-        {/* Left Section */}
-        <div>
-          <div className='w-[579px] h-[289px] relative '>
-            <Image
-              src={program.imageSrc}
-              alt={program.title}
-              fill
-              objectFit='c'
-              className='absolute rounded-2xl'
-            />
-          </div>
-          <p className='text-xl font-semibold py-4 leading-10'>{program.title}</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            ratione sequi enim, quos voluptate rerum, ipsum, suscipit numquam
-            minus architecto amet vero distinctio consequatur voluptatibus
-            excepturi dolorum odio laborum quae!
-          </p>
-        </div>
+        <h1 className='text-center text-2xl font-bold mb-16'>Donation Process</h1>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
 
-        {/* Right Section */}
-        <div>
-          {/* Progress Bar */}
-          <div className="w-full bg-gray-200 h-2 rounded-full mt-3">
-            <div
-              className="h-2 bg-green-500 rounded-full"
-              style={{
-                width: `${(program.raised / program.goal) * 100}%`,
-              }}
-            ></div>
-          </div>
-          <div>Donate Using Paystack</div>
-          <div>
-            <p>Or</p>
-            <p>Direct Transfer to Account details below</p>
+            {/* Left Section */}
             <div>
-              <p>Account Name</p>
-              <p>:</p>
-              <p>Muhammed Jummah</p>
+                <div className='w-[579px] h-[289px] relative '>
+                    <Image
+                    src={program.imageSrc}
+                    alt={program.title}
+                    fill
+                    objectFit='cover'
+                    className='absolute rounded-2xl'
+                    />
+                </div>
+                <p className='text-xl font-semibold py-4'>{program.title}</p>
+                <p className='leading-loose'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                    ratione sequi enim, quos voluptate rerum, ipsum, suscipit numquam
+                    minus architecto amet vero distinctio consequatur voluptatibus
+                    excepturi dolorum odio laborum quae!
+                </p>
             </div>
+
+            {/* Right Section */}
             <div>
-              <p>Account Number</p>
-              <p>:</p>
-              <p>04563289</p>
+
+                            {/* Progress Bar */}
+                <div className="w-full bg-gray-200 h-2 rounded-full mt-3">
+                    <div className="h-2 bg-green-500 rounded-full" style={{ width: `${(program.raised / program.goal) * 100}%`,}}></div>
+                </div>
+
+                <div>Donate Using Paystack</div>
+                <div>
+                    <p>Or</p>
+                    <p>Direct Transfer to Account details below</p>
+                    <div>
+                        <p>Account Name</p>
+                        <p>:</p>
+                        <p>Muhammed Jummah</p>
+                    </div>
+                    <div>
+                        <p>Account Number</p>
+                        <p>:</p>
+                        <p>04563289</p>
+                    </div>
+                    <div>
+                        <p>Bank Name</p>
+                        <p>:</p>
+                        <p>Jaiz Bank</p>
+                    </div>
+                </div>
             </div>
-            <div>
-              <p>Bank Name</p>
-              <p>:</p>
-              <p>Jaiz Bank</p>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
   );
 };
