@@ -4,4 +4,5 @@ export const NAV_LINKS = [
   { href: '/donation', key: 'donations', label: 'Donations', current: false },
   { href: '/blogs', key: 'blogs', label: 'Blogs', current: false },
   { href: '/ramadan', key: 'ramadan', label: 'Ramadan', current: false },
+  { href: '/dashboard', key: 'dashboard', label: 'Dashboard', current: false },
 ];
