@@ -29,7 +29,7 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="p-6">
+    <div className="p-6 pt-16">
       <h1 className="text-2xl font-semibold mb-2">Welcome Back</h1>
       <p className="text-gray-600 mb-6">Review the updated foundation dashboard</p>
 
@@ -57,22 +57,24 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         {/* Pie Chart */}
         <Card className="p-4">
-          <h3 className="text-lg font-semibold">Content Analysis</h3>
-          <PieChart width={300} height={200}>
-            <Pie data={contentData} dataKey="value" outerRadius={80} label>
+          <h3 className="text-lg text-center font-semibold">Content Analysis</h3>
+        <div className="flex">
+            <PieChart width={300} height={200} >
+            <Pie data={contentData} dataKey="value" outerRadius={70} label>
               {contentData.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={entry.color} />
               ))}
             </Pie>
             <Tooltip />
           </PieChart>
-          <div className="flex justify-between mt-2">
+          <div className="flex flex-col  justify-around mt-2">
             {contentData.map((entry, index) => (
               <span key={index} className="text-sm" style={{ color: entry.color }}>
                 ● {entry.name}
               </span>
             ))}
           </div>
+        </div>
         </Card>
 
         {/* Line Chart */}
